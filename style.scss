@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.anime-trans {
+    @apply flex justify-between;
+}
+
+
+a:link {
+    color: #ff0000;
+}
+
+a:visited {
+    color: #00FF00;
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+
+.highlight:hover {
+    color: #ff0000;
+    font-size: 22px;
+}
+
+.hover {
+    p {
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+    }
+}
+
+.hover:hover {
+    p {
+        display: block;
+    }
+}
+
+p:first-child {
+    color: blue;
+}
+
+h1::before {
+    content: '"';
+    color: #00FF00;
+}
+
+h1::after {
+    content: '"';
+    color: #00FF00;
+}
+
+li:nth-child(-n+2) {
+    border: 2px solid green;
+}
+
+li:first-child {
+    border: 2px solid blue;
+}
+
+.text-wrapper {
+    background-color: #003049;
+    overflow: hidden;
+
+    h1 {
+        font-size: 48px;
+        white-space: nowrap;
+        animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.anime {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
